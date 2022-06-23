@@ -1,0 +1,97 @@
+//////////////////////////////////////
+// GRID 
+.container {
+    display: grid;
+    grid-template-rows: 100vh min-content 55vw min-content 95vh min-content;
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem,1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end]; //14rem is from 1140/800
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 100vh min-content min-content min-content 95vh min-content;
+    }
+}
+
+.sidebar {
+    background-color: $color-secondary;
+    grid-row: 1 / 2;
+    grid-column: sidebar-start / sidebar-end;
+}
+
+// .sidebar-fill {
+//     background-color: $color-secondary;
+//     grid-row: 2 / -1;
+//     grid-column: sidebar-start / sidebar-end;
+
+//     @media only screen and (max-width: $bp-medium) {
+//         display: none;
+//     }
+// }
+
+.header {
+    //background-color: aqua;
+    grid-row: 1 / 2;
+    grid-column: full-start / full-end;
+}
+
+.portfolio {
+    //background-color: yellowgreen;
+    grid-row: 2 / 3;
+    //grid-column: center-start / center-end;
+    grid-column: 1 / -1;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+        padding: 2rem;
+    }
+
+}
+
+.about {
+    //background-color: blueviolet;
+    grid-row: 3 / 4;
+    //grid-column: full-start / full-end;
+    grid-column: 1 / -1;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+    }
+}
+
+.languages {
+    //background-color: $color-secondary;
+    grid-row: 4 / 5;
+    //grid-column: center-start / center-end;
+    grid-column: 1 / -1;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+    }
+
+    
+}
+
+.playlist {
+    //background-color: darksalmon;
+    grid-row: 5 / 6;
+    //grid-column: full-start / full-end;
+
+    grid-column: 1 / -1;
+
+    // for linear gradient
+    position: relative; 
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+    }
+}
+
+.footer {
+    //background-color: goldenrod;
+    grid-row: 6 / 7;
+    //grid-column: full-start / full-end;
+
+    grid-column: 1 / -1;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+    }
+}

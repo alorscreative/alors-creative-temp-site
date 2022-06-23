@@ -1,0 +1,23 @@
+.playlist {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-turquoise-light,.4),
+        rgba($color-tertiary-turquoise-light, .4)
+        ),
+        url(../img/florence-2.jpg);
+        background-size: cover;
+        background-position: center;
+    padding: 8rem 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    margin: 0 auto;
+    width: 75%;
+    height: 75%;
+    border-radius: 3px;
+    box-shadow: $box-shadow;
+}

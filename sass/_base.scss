@@ -1,0 +1,97 @@
+//////////////////////////////////////
+// VARIABLES 
+
+// FONT VARIABLES 
+$default-font-family: 'Montserrat', sans-serif;
+$heading-font-family: 'Bebas Neue', cursive;
+$display-font-family: 'Raleway Dots', cursive;
+
+//COLOR VARIABLES
+$color-primary: #706fd3;
+$color-primary-light: #9c88ff;
+
+$color-secondary: #d3706f;
+$color-secondary-light: #ff9c88;
+
+$color-tertiary-orange: #d3a26f;
+$color-tertiary-orange-light: #ffd888;
+
+$color-tertiary-yellow: #d2d36f;
+$color-tertiary-yellow-light: #ebff88;
+
+$color-tertiary-turquoise: #6fd2d3;
+$color-tertiary-turquoise-light: #88ebff;
+
+$color-grey-light-1: #faf9f9;
+$color-grey-light-2: #f4f2f2;
+$color-grey-light-3: #f0eeee;
+$color-grey-light-4: #ccc;
+
+$color-grey-dark-1: #333;
+$color-grey-dark-2: #777;
+$color-grey-dark-3: #999;
+
+$color-white: #fff;
+$color-black: #000;
+
+$box-shadow: 0 2rem 5rem rgba(0,0,0, .3);
+
+// BREAKPOINTS 
+$bp-largest: 75em; //1200px
+$bp-large: 56.25em; //900px
+$bp-medium: 43.75em; //700px
+$bp-small: 37.5em; //600px;
+
+//////////////////////////////////////
+// BASE STYLES
+
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // font size: 1rem = 10px, 10px/16px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $default-font-family;
+    color: $color-grey-dark-1;
+    line-height: 1.6;
+}
+
+//////////////////////////////////////
+// TYPOGRAPHY 
+.heading-3 {
+    color: $color-white;
+    font-size: 2.5rem;
+    margin: 3rem auto;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+
+    // GRID 
+    grid-row: 1 / 2;
+
+    &--light {
+        background-image: linear-gradient(
+        to right, 
+        $color-secondary-light,
+        $color-secondary,
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    }
+}
+
+//////////////////////////////////////
+// BUTTONS

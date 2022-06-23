@@ -1,0 +1,119 @@
+.top-navbar {
+    
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    backface-visibility: hidden;
+
+    animation: moveInLeft 1s ease-out;
+}
+
+// .logo-box {
+//     margin-left: 3rem;
+//     margin-top: 1.3rem;
+
+//     &__img {
+//         height: 8rem;
+//     }
+// }
+
+.navbar {
+    backface-visibility: hidden;
+
+    &__list {
+        display: flex;
+        margin-top: 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    &__item {
+        padding: 1rem 3rem;
+        list-style: none;
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-white;
+        font-size: 1.5rem;
+        letter-spacing: .3rem;
+        transition: all .2s;
+    }
+
+    &__link:hover 
+     {
+        color: $color-secondary;
+        transform: scaleX(1.2);
+        text-shadow: 0rem .6rem .9rem rgba(0,0,0,0.7);
+    }
+
+    &__link:active {
+        color: $color-secondary;
+        transform: scaleX(1.2) translateY(.5rem);
+        text-shadow: 0rem .4rem .9rem rgba(0,0,0,0.7);
+    }
+
+}
+
+.header {
+    background-image: 
+    linear-gradient(to right bottom,
+    rgba($color-primary-light, .5), 
+    rgba($color-primary, .5)),
+    url(../img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+
+    
+    &__content {
+
+        color: $color-white;
+        font-size: 3rem;
+        //font-family: $heading-font-family;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        font-weight: 300;
+
+        margin-top: 25rem;
+        margin-left: 3rem;
+
+        backface-visibility: hidden;
+
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 81.25em) {
+            font-size: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+        }
+    }
+
+    &__heading {
+        
+        color: $color-secondary;
+        animation: moveInBottom 1s ease-out;
+
+        flex: 0 0 30%;
+
+    }
+
+    &__text {
+        animation: moveInTop 1s ease-out;
+        
+    }
+
+}
