@@ -2,7 +2,7 @@
 // GRID 
 .container {
     display: grid;
-    grid-template-rows: 100vh min-content 55vw min-content 95vh min-content;
+    grid-template-rows: 100vh min-content 55vw min-content 95vh min-content min-content;
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem,1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end]; //14rem is from 1140/800
 
     @media only screen and (max-width: $bp-large) {
@@ -84,9 +84,18 @@
     }
 }
 
+.new-site-soon {
+    grid-row: 6 /7;
+    grid-column: 1 / -1;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+    }
+}
+
 .footer {
     //background-color: goldenrod;
-    grid-row: 6 / 7;
+    grid-row: 7 / 8;
     //grid-column: full-start / full-end;
 
     grid-column: 1 / -1;
