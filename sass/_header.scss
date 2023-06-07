@@ -68,8 +68,8 @@
     linear-gradient(to right bottom,
     rgba($color-primary-light, .5), 
     rgba($color-primary, .5)),
-    url(../img/hero.jpg);
-    background-position: center;
+    url(../img/new-hero.jpg);
+    background-position: right;
     background-size: cover;
 
     
@@ -88,7 +88,7 @@
         backface-visibility: hidden;
 
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
 
         @media only screen and (max-width: 81.25em) {
             font-size: 2rem;
@@ -103,11 +103,11 @@
     }
 
     &__heading {
-        
+        margin-right: 4rem;
         color: $color-secondary;
         animation: moveInBottom 1s ease-out;
 
-        flex: 0 0 30%;
+        // flex: 0 0 30%;
 
     }
 

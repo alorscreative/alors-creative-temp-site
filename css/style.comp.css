@@ -96,8 +96,8 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
   .about__image {
-    background-image: linear-gradient(to right bottom, rgba(235, 255, 136, 0.4), rgba(210, 211, 111, 0.4)), url(../img/hero-2.jpg);
-    background-position: bottom;
+    background-image: linear-gradient(to right bottom, rgba(235, 255, 136, 0.4), rgba(210, 211, 111, 0.4)), url(../img/linds-headshot.png);
+    background-position: top;
     background-size: cover; }
     @media only screen and (max-width: 43.75em) {
       .about__image {
@@ -246,8 +246,8 @@ body {
     text-shadow: 0rem 0.4rem 0.9rem rgba(0, 0, 0, 0.7); }
 
 .header {
-  background-image: linear-gradient(to right bottom, rgba(156, 136, 255, 0.5), rgba(112, 111, 211, 0.5)), url(../img/hero.jpg);
-  background-position: center;
+  background-image: linear-gradient(to right bottom, rgba(156, 136, 255, 0.5), rgba(112, 111, 211, 0.5)), url(../img/new-hero.jpg);
+  background-position: right;
   background-size: cover; }
   .header__content {
     color: #fff;
@@ -258,8 +258,7 @@ body {
     margin-top: 25rem;
     margin-left: 3rem;
     backface-visibility: hidden;
-    display: flex;
-    justify-content: space-between; }
+    display: flex; }
     @media only screen and (max-width: 81.25em) {
       .header__content {
         font-size: 2rem; } }
@@ -270,9 +269,9 @@ body {
         flex-direction: column;
         width: 20%; } }
   .header__heading {
+    margin-right: 4rem;
     color: #d3706f;
-    animation: moveInBottom 1s ease-out;
-    flex: 0 0 30%; }
+    animation: moveInBottom 1s ease-out; }
   .header__text {
     animation: moveInTop 1s ease-out; }
 
